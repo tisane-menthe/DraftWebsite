@@ -1,0 +1,105 @@
+ <!DOCTYPE html>
+<html lang="">
+
+<head>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>testing</title>
+
+<style>
+
+
+
+  .d1{background:LightSkyBlue;
+
+  	}
+  .d2{background:LightSalmon;}
+  .d3{background:PaleTurquoise;}
+  .d4{background:LightPink;}
+  .d5{background:PaleGreen;}
+
+
+  body {
+  	height: 100vh;
+    font-family: Poppins;
+  }
+
+    a { text-decoration: none;
+    color: black; }
+  .container {
+    font-size: 40px;
+    width: 50%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+  }
+
+  .text {
+    align-self: center;
+    font-weight: bold;
+    font-size: 50px;
+    padding-left: 40px;
+  }
+
+  .subtext {
+    position: fixed;
+    left: 53%;
+    right: 3%;
+    top: 40%;
+    display: none;
+    font-weight: normal;
+    font-size: 25px;
+    font-style: normal;
+
+
+  }
+
+  span.text:hover {
+    font-style: oblique;
+
+  }
+
+  span.text:hover > .subtext{
+    display: block;
+
+  }
+
+</style>
+  <script src="../p5.js"></script>
+  <script src="../addons/p5.sound.min.js"></script>
+  <script src="sketch.js"></script>
+</head>
+
+<body>
+	
+<div class="container">
+  <div class="text" id="digital">
+  <span class="text">
+  <a href="grid/index.html">Digital r0</a>
+  <p class="subtext"> Find here the digital version of our volunteer's zine R0. </p>
+</span>
+
+</div>
+  <div class="text" id="blog">
+  <span class="text">Blog
+  <p class= "subtext">Read more personal stories and reflections by our volunteers. </p>
+  </span>
+</div>
+ 
+   <div class="text" id="projects">
+  <span class="text">Volunteers & Projects
+  <p class= "subtext"> Discover past and present volunteers as well as their personal projects. </p>
+  </span>
+</div>
+
+  <div class="text" id="about">
+  <span class="text">About
+  <p class= "subtext"> Who are we ? What is this website ? What is A4 ? What is life ? Some explanation and ways to stay in touch here.  </p>
+  </span>
+</div>
+</div>
+
+</body>

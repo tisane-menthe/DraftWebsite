@@ -6,28 +6,24 @@
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>testing</title>
+  <title>Welcome to the zero dimension</title>
 
 <style>
 
-
-
-  .d1{background:LightSkyBlue;
-
-  	}
-  .d2{background:LightSalmon;}
-  .d3{background:PaleTurquoise;}
-  .d4{background:LightPink;}
-  .d5{background:PaleGreen;}
-
+@font-face {
+  font-family: london;
+  src: url('fonts/old_london/OldLondon.ttf');
+}
 
   body {
   	height: 100vh;
     font-family: Poppins;
+    background-color: white;
   }
 
     a { text-decoration: none;
     color: black; }
+
   .container {
     font-size: 40px;
     width: 50%;
@@ -53,17 +49,58 @@
     font-weight: normal;
     font-size: 25px;
     font-style: normal;
-
-
   }
 
-  span.text:hover {
+span.text:hover {
     font-style: oblique;
 
   }
 
   span.text:hover > .subtext{
     display: block;
+
+  }
+
+  .navbar {
+    border-radius: 0px 0px 0px 25px;
+
+    background-color:black;
+    position: fixed;
+    top: 0%;
+    right: 0%;
+    width: 230px;
+    height: 50px;    
+    padding: 5px;
+    display: inline;
+
+    text-align: center;
+  } 
+
+  #a4 {
+    width: 140px;
+  }
+
+  #email {
+    width: 40px;
+    margin-bottom: 10px;
+    margin-left: 20px;
+  }
+
+  img:hover {
+    transform: skew(-.2rad);
+  }
+
+  .footer {
+    position: fixed;
+    font-family: london;
+    bottom: 0;
+    right: 0;
+    padding: 3px 12px 0px 3px;
+  }
+
+  #R0 {
+
+  width: 100px;
 
   }
 
@@ -75,6 +112,16 @@
 
 <body>
 	
+<div class="navbar">
+<a href="https://a4.sk"><img id="a4" src="logos/a4v4.png" alt="logo A4"></a>
+ <a href="mailto:r.zero.desk@gmail.com"><img id="email" src="logos/email2.png" alt="logo email"></a>
+
+</div> 
+
+<div class="footer"> 
+<img id="R0" src="logos/R0_Salmon.png" alt="logo R0">
+</div>
+
 <div class="container">
   <div class="text" id="digital">
   <span class="text">
@@ -96,10 +143,15 @@
 </div>
 
   <div class="text" id="about">
-  <span class="text">About
+  <span class="text">   <a href="pages/about.html">About </a>
   <p class= "subtext"> Who are we ? What is this website ? What is A4 ? What is life ? Some explanation and ways to stay in touch here.  </p>
   </span>
 </div>
+
+
+
 </div>
+
+
 
 </body>

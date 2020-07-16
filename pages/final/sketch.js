@@ -15,8 +15,25 @@ let maxLines = 12;
 
 let clickEllipse = []; 
 
+let safari;
+
+let stroking = "rgba(11, 255, 212, 0.6)";
+
 function setup() {
 
+
+var ua = navigator.userAgent.toLowerCase(); 
+
+if (ua.indexOf('safari') != -1) { 
+  if (ua.indexOf('chrome') > -1) {
+    safari = false;
+    //console.log("chrome") // Chrome
+  } else {
+    safari = true; 
+    stroking = "rgba(11, 255, 212, 0.9)";
+    //console.log("safari") // Safari
+  }
+}
 
   canvas = createCanvas(windowWidth, windowHeight, WEBGL);
 
@@ -26,7 +43,8 @@ function setup() {
   gl = this._renderer.GL;
   gl.disable(gl.DEPTH_TEST);
 
-  
+
+
   ellipses.push(new CreateEllipse(0, 0, radius));
   ellipses.push(new CreateEllipse(0, 0, radius));
   ellipses.push(new CreateEllipse(0, 0, radius));
@@ -44,8 +62,10 @@ function setup() {
 
 function draw() {
 
- background('rgba(11, 255, 212,0.6)');
-console.log(clickEllipse);
+
+background(stroking);
+//background(11, 255, 212);
+
 
 noStroke();
 fill(255);
@@ -57,7 +77,7 @@ rect(0, -height/2, width/2, height);
    let remapY = map(mouseY, 0, height, -height/2, height/2);
 
   
-  stroke('rgba(11, 255, 212,0.6)');
+  stroke(stroking);
   strokeWeight(1);
   for (var k = 0; k < maxLines; k++) {
 

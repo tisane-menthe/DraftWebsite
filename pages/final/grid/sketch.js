@@ -60,6 +60,10 @@ let repeatImg;
 let xImg_b;
 let repeatImg_b;
 
+
+//Browser stuff
+let safari;
+
 function preload(){
     RLogo = loadImage('rlogo_white.png');
     Unfold = loadImage('text1.png');
@@ -78,8 +82,20 @@ function setup() {
   //Disable depth test because otherwise it messes with the alpha channel
   gl = this._renderer.GL;
   gl.disable(gl.DEPTH_TEST);
-  //setAttributes('perPixelLighting', false);
 
+var ua = navigator.userAgent.toLowerCase(); 
+
+if (ua.indexOf('safari') != -1) { 
+  if (ua.indexOf('chrome') > -1) {
+    safari = false;
+    //console.log("chrome") // Chrome
+  } else {
+    safari = true; 
+  my_tint_rot = "rgba(11, 255, 212,0.9)";
+  my_tint_lin = "rgba(11, 255, 212,0.5)";    //
+  console.log("safari") // Safari
+  }
+}
 
 
   //Plane vertices
